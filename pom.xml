@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>PoC</groupId>
+	  <groupId>PoC</groupId>
   <artifactId>testing_ic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -22,4 +22,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+	<plugins>
+         <plugin>  
+    <artifactId>maven-failsafe-plugin</artifactId>
+    <version>2.11</version>
+    <configuration>
+<suiteXmlFiles>
+<suiteXmlFile>testng.xml</suiteXmlFile>
+</suiteXmlFiles>
+</configuration>
+    <executions>
+      <execution>
+        <goals>
+          <goal>integration-test</goal>
+          <goal>verify</goal>
+        </goals>
+      </execution>
+    </executions>
+  </plugin>
+</plugins>
 </project>
