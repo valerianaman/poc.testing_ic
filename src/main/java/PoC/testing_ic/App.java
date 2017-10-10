@@ -10,4 +10,5 @@ public class App
     {
         System.out.println( "Hello World, GBB! You're testing poll SCM" );
     }
+/* this is the development from short feature */
 }
